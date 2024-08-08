@@ -1,21 +1,19 @@
 const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-const sequelize = require("../config/connection.js");
+class Plastic extends Model {}
 
-class Category extends Model {};
-
-Category.init(
+Plastic.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
+            primaryKey: true, 
             autoIncrement: true,
-        },
-
-        category_name: {
+        }, 
+        plastic_name: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false, 
         },
     },
     {
@@ -23,8 +21,8 @@ Category.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "category",
+        modelName: "plastic",
     },
 );
 
-module.exports = Category;
+module.exports = Plastic;
