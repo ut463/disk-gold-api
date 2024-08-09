@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
                 { model: Discs }
             ],
         });
-        res.status(200)json(plastics);
+        res.status(200).json(plastics);
     } catch (err) {
         res.status(500).json({ message: "no no no! not in my house"});
     }

@@ -1,1 +1,1 @@
-# disk-gold-api
+# disk-golf-api
