@@ -23,7 +23,7 @@ Discs.init(
             },
         },
         plastic_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: "plastic",
                 key: "id",

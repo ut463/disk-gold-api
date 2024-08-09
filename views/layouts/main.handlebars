@@ -4,22 +4,23 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Project 2</title>
+    <link href="/css/output.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class=''>
-      <header class=''>
-        <h1>
+    <div class='bg-fixed bg-contain' style="background-image: url(https://www.lego.com/cdn/cs/set/assets/blt363dbbfb53d05684/10332.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1);">
+      <header class='bg-blue-500 text-3xl'>
+        <h1 class="font-bold flex justify-center">
           <a href='/'>Project 2</a>
         </h1>
-        <nav>
+        <nav class="flex justify-center ">
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href='/dashboard'>Dashboard</a>
+            <a class="flex justify-start" href='/disk'>Disk</a>
 
-            <a href='/profile'>Profile</a>
+            <a class="flex mx-6 justify-center" href='/bag'>Bag</a>
 
-            <button class='' id='logout'>logout</button>
+            <button class='flex justify-end' id='logout'>logout</button>
           {{else}}
             <a href='/login'>Login or Sign-up</a>
           {{/if}}
