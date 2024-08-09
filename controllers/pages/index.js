@@ -2,13 +2,13 @@ const router = require('express').Router();
 const path = require('path');
 const withAuth = require('../../middleware/auth');
 
-const profile = require('./profile-page');
-const dashboard = require('./dashboard-page');
+const bag = require('./bag-page');
+const disk = require('./disk-page');
 const login = require('./login-page');
 
-router.use('/profile', withAuth, profile);
+router.use('/bag', withAuth, bag);
 
-router.use('/dashboard', withAuth, dashboard);
+router.use('/disk', withAuth, disk);
 
 router.use('/login', login);
 
