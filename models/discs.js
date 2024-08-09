@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Discs extends Model {}
+class Discs extends Model {};
 
 Discs.init(
     {
@@ -11,7 +11,7 @@ Discs.init(
             primaryKey: true, 
             autoIncrement: true,
         }, 
-        disc_name: {
+        discs_name: {
             type: DataTypes.STRING,
             allowNull: false, 
         },
