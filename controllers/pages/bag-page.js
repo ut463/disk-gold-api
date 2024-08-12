@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
       nest: true,
     });
 
-    res.render('bag', {
+    res.render('UserDisc', {
       ...userData,
       logged_in: true
     });
