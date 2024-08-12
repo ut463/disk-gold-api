@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router.get('/', async (req, res) => {
   try {
-    res.render('disk', {
+    res.render('disc', {
       logged_in: true
     });
   } catch (err) {
@@ -12,3 +12,4 @@ router.get('/', async (req, res) => {
 
 
 module.exports = router;
+
