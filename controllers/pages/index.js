@@ -3,12 +3,12 @@ const path = require('path');
 const withAuth = require('../../middleware/auth');
 
 const bag = require('./bag-page');
-const disk = require('./disk-page');
+const disc = require('./disc-page');
 const login = require('./login-page');
 
 router.use('/bag', withAuth, bag);
 
-router.use('/disk', withAuth, disk);
+router.use('/disk', withAuth, disc);
 
 router.use('/login', login);
 
