@@ -1,34 +1,36 @@
 const User = require('./User');
 const Category = require("./category");
-const Discs = require("./discs");
+const Disc = require("./disc");
 const Plastic = require("./plastic");
-const UserDiscs = require('./UserDiscs');
+const UserDisc = require('./UserDisc');
 
-User.belongsToMany(Discs, {
-    through: UserDiscs,
+User.belongsToMany(Disc, {
+    through: UserDisc,
     foreignKey: 'user_id'
 });
 
 
-Discs.belongsToMany(User, {
-    through: UserDiscs,
+Disc.belongsToMany(User, {
+    through: UserDisc,
     foreignKey: 'disc_id'
 });
 
-Discs.belongsTo(Category, {
+Disc.belongsTo(Category, {
     foreignKey: 'category_id'
 })
 
-Category.hasMany(Discs, {
+Category.hasMany(Disc, {
     foreignKey: 'category_id'
 });
 
-Discs.belongsTo(Plastic, {
-    foreignKey: 'plastic_id'
+Disc.belongsToMany(Plastic, {
+    foreignKey: 'disc_id',
+    through: 'DiscPlastic',
 })
 
-Plastic.hasMany(Discs, {
-    foreignKey: 'plastic_id'
+Plastic.belongsToMany(Disc, {
+    foreignKey: 'plastic_id',
+    through: 'DiscPlastic',
 });
 
 
@@ -36,8 +38,7 @@ Plastic.hasMany(Discs, {
 module.exports = {
     User,
     Category,
-    Discs,
+    Disc,
     Plastic,
-    UserDiscs
+    UserDisc,
 };
-
