@@ -1,16 +1,14 @@
 const router = require("express").Router();
-const { User, Category, Discs, UserDiscs, Plastic } = require("/../models");
-
-
+const { User, Category, Disc, UserDisc, Plastic } = require("/../models");
 
 //get all discs
 router.get('/', (req, res) => {
-    Discs.findAll({
+    Disc.findAll({
         include: [
             Category,
             {
-                model: Discs,
-                through: UserDiscs
+                model: Disc,
+                through: UserDisc
             },
         ]
     });
