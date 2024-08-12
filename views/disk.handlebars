@@ -1,1 +1,16 @@
-<h3 class="flex justify-center">Disk Page</h3>
+<div>
+    <h3 class="flex justify-center bg-green-900 text-3xl text-white">Disc Page Please add or remove discs to and from your bag.</h3>
+    <div>
+        
+        {{#each discs as |disc| }}
+            <div>
+                <p>
+                    {{disc.discs_name}}
+                    {{disc.category_id}}
+                </p>
+            </div>
+        {{/each}}
+        
+    
+    </div>
+</div>

@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
                 through: UserDiscs
             },
         ]
-    }),
+    });
 })
     .then((discs) => res.json(discs))
     .catch((err) => {
