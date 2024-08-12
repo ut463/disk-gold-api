@@ -1,4 +1,4 @@
-const { Discs } = require('../models/');
+const { Disc } = require('../models/');
 
 const discData = [
     {
@@ -222,6 +222,6 @@ const discData = [
     },    
 ];
 
-const seedDiscs = () => Discs.bulkCreate(discData);
+const seedDiscs = () => Disc.bulkCreate(discData);
 
 module.exports= seedDiscs;

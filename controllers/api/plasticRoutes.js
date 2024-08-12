@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Discs, Plastic, Category, User } = require("../../models");
+const { Disc, Plastic, Category, User } = require("../../models");
 
 router.get("/", async (req, res) => {
     try {
@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
             include: [{
                 model: Category
             }, 
-                { model: Discs }
+                { model: Disc }
             ],
         });
         res.status(200).json(plastics);

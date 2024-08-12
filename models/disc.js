@@ -1,28 +1,24 @@
 const { Model, DataTypes } = require("sequelize");
-
 const sequelize = require("../config/connection");
 
-class UserDiscs extends Model { }
+class Disc extends Model {};
 
-UserDiscs.init(
+Disc.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
+            primaryKey: true, 
             autoIncrement: true,
+        }, 
+        discs_name: {
+            type: DataTypes.STRING,
+            allowNull: false, 
         },
-        user_id: {
+        category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: "user",
-                key: "id",
-            },
-        },
-        disc_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "discs",
+                model: "category", 
                 key: "id",
             },
         },
@@ -32,8 +28,8 @@ UserDiscs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "user_discs",
+        modelName: "disc",
     },
 );
 
-module.exports = UserDiscs;
+module.exports = Disc;
