@@ -46,7 +46,7 @@ const loginFormHandler = async (event) => {
       return;
     }
 
-    document.location.replace('/disk');
+    document.location.replace('/disc');
   } catch (err) {
     console.log(err);
     showError(loginFormEl, "A login error has ocurred.")
@@ -90,7 +90,7 @@ const signupFormHandler = async (event) => {
       return;
     }
 
-    document.location.replace('/dashboard');
+    document.location.replace('/bag');
   } catch (err) {
     console.log(err);
     showError(signupFormEl, "A signup error has ocurred.");

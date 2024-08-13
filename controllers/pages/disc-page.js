@@ -1,30 +1,26 @@
 const router = require('express').Router();
 const { User, Category, Disc, UserDisc, Plastic } = require("../../models");
 
-//get all discs
-router.get('/', (req, res) => {
-  Disc.findAll({
-    include: [
-      Category,
-      {
-        model: User,
-        through: UserDisc
-      },
-    ]
-  })
-    .then((discs) => res.json(discs))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
-
-
+// /discs
 router.get('/', async (req, res) => {
   try {
+
+    const discs = await Disc.findAll({
+      include: [
+        Category,
+        {
+          model: User,
+          through: UserDisc
+        },
+      ],
+      raw: true,
+      nest: true,
+    });
+
+
     res.render('disc', {
-      logged_in: true
+      logged_in: true,
+      discs
     });
   } catch (err) {
     res.status(500).json(err);
