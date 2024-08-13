@@ -1,13 +1,14 @@
 <div>
-    <h3 class="flex justify-center bg-green-900 text-3xl text-white">Disc Page Please add or remove discs to and from your bag.</h3>
-    <div>
-        
+    <h3 class="flex font-bold justify-center text-green-900 text-3xl bg-white">Disc Page: </h3>
+    <h3 class="flex justify-center text-green-900 text-3xl bg-white">Please add or remove discs to and from your bag.</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 pb-40">
+        {{!-- flex flex-auto justify-between flex-wrap pb-4 --}}
         {{#each discs}}
-            <div class="disc">
-                <p>
+            <div class="disc h-40 rounded border border-yellow-300 text-2xl m-4 bg-green-800 text-white p-3">
+                <p class="italic">
                     {{this.discs_name}}
                 </p>
-                <button data-disc="{{this.id}}" class="disc-btn btn">Add</button>
+                <button data-disc="{{this.id}}" class="disc-btn border border-black bg-white text-green-800 rounded btn">Add</button>
             </div>
         {{/each}}
         
