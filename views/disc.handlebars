@@ -2,15 +2,17 @@
     <h3 class="flex justify-center bg-green-900 text-3xl text-white">Disc Page Please add or remove discs to and from your bag.</h3>
     <div>
         
-        {{#each discs as |disc| }}
-            <div>
+        {{#each discs}}
+            <div class="disc">
                 <p>
-                    {{disc.discs_name}}
-                    {{disc.category_id}}
+                    {{this.discs_name}}
                 </p>
+                <button data-disc="{{this.id}}" class="disc-btn btn">Add</button>
             </div>
         {{/each}}
         
     
     </div>
 </div>
+
+<script src="/js/disc.js"></script>

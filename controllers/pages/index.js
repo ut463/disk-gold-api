@@ -8,7 +8,7 @@ const login = require('./login-page');
 
 router.use('/bag', withAuth, bag);
 
-router.use('/disk', withAuth, disc);
+router.use('/disc', withAuth, disc);
 
 router.use('/login', login);
 
