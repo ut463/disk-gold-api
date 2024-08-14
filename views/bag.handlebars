@@ -3,10 +3,14 @@
   {{first_name}}, this is your disc bag. 
 </h2>
 <div class="container bg-green-900">
-  <div"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 pb-40"></div>>
-    <p class="">
+  {{#each discs}}
+    <div class=" gap-4 pb-40"></div>
 
-    </p>
-  </div>
-
+      <p class="bg-white">
+        <ul>
+          <li class="text-green-900 text-2xl">{{this.discs_name}}</li>
+        </ul>
+      </p>
+    </div>
+  {{/each}}
 </div>
