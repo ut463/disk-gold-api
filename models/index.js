@@ -6,13 +6,11 @@ const UserDisc = require('./UserDisc');
 
 User.belongsToMany(Disc, {
     through: UserDisc,
-    foreignKey: 'user_id'
 });
 
 
 Disc.belongsToMany(User, {
     through: UserDisc,
-    foreignKey: 'disc_id'
 });
 
 Disc.belongsTo(Category, {
