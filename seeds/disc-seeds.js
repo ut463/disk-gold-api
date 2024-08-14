@@ -4,6 +4,7 @@ const discData = [
     {
         discs_name: 'Nuke',
         category_id: 1,
+        discs_flight:'13, 5, -1, 3',
     },
     {
         discs_name: 'Nuke OS',

@@ -15,6 +15,9 @@ Disc.init(
             type: DataTypes.STRING,
             allowNull: false, 
         },
+        discs_flight: {
+            type: DataTypes.STRING,
+        },
         category_id: {
             type: DataTypes.INTEGER,
             references: {
