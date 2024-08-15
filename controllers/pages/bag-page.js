@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
 
     console.log(userData.discs);
 
+    
     res.render('bag', {
       ...userData,
       logged_in: true
