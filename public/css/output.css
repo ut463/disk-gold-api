@@ -823,3 +823,13 @@ video {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
+
+.card {
+  transform: translateX(100px);
+  transition: 150ms;
+}
+
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
