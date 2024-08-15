@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+    transition: opacity 200ms ease;
+    opacity: 0;
+}
+
+.card.show {
+    transform: translateX(0);
+    opacity: 1;
+}
